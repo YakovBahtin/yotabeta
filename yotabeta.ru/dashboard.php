@@ -10,13 +10,10 @@ include("auth.php");
 <link rel="stylesheet" href="css.css">
 </head>
 <body><?php
-$links = array(1 => '<a href="dices.php">Дайсы</a> ', 2 => '<a href="chances.php">Шансы</a> ', 3 => '<a href="home.php">Главная</a> ', 4 => '<a href="rolls.php">Броски</a> ', 5 => '<a href="login.php">Войти</a> ');
- $d=rand(1,5);$dd=$d;echo $links[$d];
- while ($d==$dd) {$d=rand(1,5);};$ddd=$d;echo $links[$d];
- while ($d==$ddd or $d==$dd) {$d=rand(1,5);};$dddd=$d; echo $links[$d];
- while ($d==$ddd or $d==$dd or $d==$dddd) {$d=rand(1,5);};$ddddd=$d;echo $links[$d];
- while ($d==$ddd or $d==$dd or $d==$dddd or $d==$ddddd) {$d=rand(1,5);};echo $links[$d]; ?>
+$links = array(1 => '<a href="dices.php">Дашборд</a> ', 2 => '<a href="chances.php">Шансы</a> ', 3 => '<a href="home.php">Главная</a> ', 4 => '<a href="rolls.php">Броски</a> ', 5 => '<a href="index.php">Войти</a> ');
+shuffle($links);foreach ($links as $key => $value) {echo $value;}unset($value);?>
 <div class="form">
+<a href="home.php">Главная</a>
 <p>Dashboard</p>
 <p>This is another secured page.</p>
 <p><a href="index.php">Home</a></p>

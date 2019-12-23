@@ -29,7 +29,7 @@ and password='".md5($password)."'";
 ?>
 <div class="form">
 <h1>Log In</h1><?php
-$links = array(1 => '<a href="dices.php">Дайсы</a> ', 2 => '<a href="chances.php">Шансы</a> ', 3 => '<a href="home.php">Главная</a> ', 4 => '<a href="rolls.php">Броски</a> ', 5 => '<a href="login.php">Войти</a> ');
+$links = array(1 => '<a href="dices.php">Дайсы</a> ', 2 => '<a href="chances.php">Шансы</a> ', 3 => '<a href="home.php">Главная</a> ', 4 => '<a href="rolls.php">Броски</a> ', 5 => '<a href="index.php">Войти</a> ');
  $d=rand(1,5);$dd=$d;echo $links[$d];
  while ($d==$dd) {$d=rand(1,5);};$ddd=$d;echo $links[$d];
  while ($d==$ddd or $d==$dd) {$d=rand(1,5);};$dddd=$d; echo $links[$d];
