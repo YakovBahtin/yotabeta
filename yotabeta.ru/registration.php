@@ -27,12 +27,12 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
     }else{
 ?>
 <div class="form">
-<h1>Registration</h1><a href="home.php">Главная</a>
+<h1>Регистрация</h1>Есть учётная запись?<a href="login.php"> Войди.</a>
 <form name="registration" action="" method="post">
-<input type="text" name="username" placeholder="Username" required />
-<input type="email" name="email" placeholder="Email" required />
-<input type="password" name="password" placeholder="Password" required />
-<input type="submit" name="submit" value="Register" />
+<input type="text" name="username" placeholder="Логин" required />
+<input type="email" name="email" placeholder="Почта" required />
+<input type="password" name="password" placeholder="Пароль" required />
+<input type="submit" name="submit" value="Зарегистрироваться" />
 </form>
 </div>
 <?php } ?>
