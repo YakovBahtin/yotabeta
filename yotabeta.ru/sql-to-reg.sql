@@ -7,3 +7,10 @@ CREATE TABLE IF NOT EXISTS `users` (
  `trn_date` datetime NOT NULL,
  PRIMARY KEY (`id`)
  );
+ CREATE TABLE IF NOT EXISTS `comms` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `pageid` varchar(50) NOT NULL,
+ `username` varchar(50) NOT NULL,
+ `textcomm` varchar(3000) NOT NULL,
+ PRIMARY KEY (`id`)
+ );
