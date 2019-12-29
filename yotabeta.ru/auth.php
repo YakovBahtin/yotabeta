@@ -1,6 +1,6 @@
 <?php
 session_start();
 if(!isset($_SESSION["username"])){
-header("Location: login.php");
+echo 'Вы не авторизованы! <a href="login.php">Войти</a>';
 exit(); }
 ?>
