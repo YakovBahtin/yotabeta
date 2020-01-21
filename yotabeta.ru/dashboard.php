@@ -9,11 +9,11 @@ include("auth.php");
 <title>Защищённая страница</title>
 <link rel="stylesheet" href="css.css">
 </head>
-<body><?php
-include("menu.php");?>
+<body>
+<?php include("menu.php");?>
 <div class="form">
 <a href="home.php">Главная</a>
-<p>Dashboard</p>
+<p>Отладня</p>
 <p>This is another secured page.</p>
 <p><a href="index.php">Индекс</a></p>
 <a href="logout.php">Выйти</a>

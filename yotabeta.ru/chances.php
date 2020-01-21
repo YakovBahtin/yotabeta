@@ -3,10 +3,9 @@ include("auth.php");
 ?><!DOCTYPE html><html><head><title>Шансы</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css.css"></head>
-<body><h1 class=head>Дайсы крутятся - Шансы</h1><p class=menu>Welcome <?php echo $_SESSION['username']; ?>!</p>
-<h2 class=menu><?php
-include("menu.php");?></h2>
-<p class=main>На этой странице вы сможете быстро и просто рассчитать вероятности выпадения различных результатов на игральных костях - и не только на них, если использовать воображение!
+<body><h1 class=head>Дайсы крутятся - Шансы</h1>
+	<?php include("menu.php");?>
+<p class=main style=' font-size: 30px'>На этой странице вы сможете быстро и просто рассчитать вероятности выпадения различных результатов на игральных костях - и не только на них, если использовать воображение!
 <?php
 echo 'Например, в случайно меняющей порядок ссылок шапке сайта вероятность появления <a href="home.php">≪Главной≫</a> на первом месте всего ';$q=1/count($links);echo round($q,2)*100, '%';echo "! Правда, здорово?</p>";?>
 <form class=chmain method="POST" action="">

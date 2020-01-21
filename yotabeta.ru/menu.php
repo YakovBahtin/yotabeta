@@ -1,2 +1,15 @@
-<?php
-$links = array(1 => '<a href="dices.php">Дайсы</a> ', 2 => '<a href="chances.php">Шансы</a> ', 3 => '<a href="home.php">Главная</a> ', 4 => '<a href="rolls.php">Броски</a> ', 5 => '<a href="login.php">Войти</a> ',6=> '<a href="logout.php">Выйти</a> ');shuffle($links);foreach ($links as $key => $value) {echo $value;}unset($value);?>
+<p class=menu><?php echo "Привет, ";if(isset($_SESSION["username"])) {
+	echo ($_SESSION["username"]), "."; $rsev='<a href="logout.php">Выйти</a> ';
+} else {
+	 	echo 'невошедший.';$rsev='<a href="login.php">Войти</a> ';
+	 };?></p>
+<h2 class=menu><?php
+
+$links = array(
+	1 => '<a href="dices.php">Дайсы</a> ',
+ 2 => '<a href="chances.php">Шансы</a> ',
+  3 => '<a href="home.php">Главная</a> ',
+   4 => '<a href="rolls.php">Броски</a> ',
+5 => $rsev);
+
+    shuffle($links);foreach ($links as $key => $value) {echo $value;}unset($value);?></h2>

@@ -27,7 +27,7 @@ echo '<!DOCTYPE html><html><head><title>Login</title>
 <link rel="stylesheet" href="css.css"></head>
 <body>
 <h1 class=head>Войти</h1>
-<h2 class=menu><?php include("menu.php");?></h2>
+<?php include("menu.php");?>
 <form action="" method="post" name="login">
 <input type="text" name="username" placeholder="Логин" required />
 <input type="password" name="password" placeholder="Пароль" required />
