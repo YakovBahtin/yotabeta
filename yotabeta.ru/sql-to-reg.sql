@@ -23,3 +23,4 @@ CREATE TABLE IF NOT EXISTS `users` (
  `text` varchar(3000) NOT NULL,
  PRIMARY KEY (`id`)
  );
+ALTER TABLE `users` ADD `admin` BOOLEAN NOT NULL DEFAULT FALSE AFTER `trn_date`; 
