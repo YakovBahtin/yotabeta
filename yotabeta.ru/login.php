@@ -10,8 +10,9 @@ and password='".md5($password)."'";
  $result = mysqli_query($con,$query) or die(mysql_error());
  $rows = mysqli_num_rows($result);
         if($rows==1){
-     $_SESSION['username'] = $username;
-        header("Location: index.php");
+     $_SESSION['username'] = $username;$wefr="SELECT `admin` FROM `users` WHERE `username` ='$username'";
+     $_SESSION['admin']=mysqli_query($con,$wefr);
+         header("Location: index.php");
          }else{
 echo '<!DOCTYPE html><html><head><title>Login</title>
 <meta charset="utf-8">
@@ -21,7 +22,7 @@ echo '<!DOCTYPE html><html><head><title>Login</title>
 <h3>Username/password is incorrect.</h3>';echo"
 <br/>Click here to <a href='login.php'>Login</a>";
  }
-    }else{
+}
 ?><!DOCTYPE html><html><head><title>Login</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css.css"></head>
@@ -34,6 +35,5 @@ echo '<!DOCTYPE html><html><head><title>Login</title>
 <input name="submit" type="submit" value="Войти" />
 </form>
 <p>Если ещё не зарегестрированы, <a href='registration.php'>самое время.</a></p>
-<?php } ?>
 </body>
 </html>

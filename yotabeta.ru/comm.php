@@ -6,5 +6,5 @@
   // $text_comment = htmlspecialchars($text_comment);
   $mysqli = new mysqli("localhost", "root", "", "reg");
   $mysqli->query("INSERT INTO `comms` (`username`, `pageid`, `textcomm`) VALUES ('$name', '$pageid', '$text_comment')");
-  header("Location: ".$_SERVER["HTTP_REFERER"]);// Делаем реридект обратно
+  header("Location: ".$_SERVER["HTTP_REFERER"]);
   ?>

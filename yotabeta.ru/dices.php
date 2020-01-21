@@ -7,7 +7,7 @@ include("auth.php");
 <?php include("menu.php");?>
 <p class=main style=' font-size: 30px'>Здесь представлен каталог игральных костей, или дайсов, отсортированных по различным параметрам: количеству граней и распространённости. Представлены краткие описания особенностей дайсов.</p>
 <?php
-  $pageid = 1;
+  $pageid = 2;
   $mysqli = mysqli_connect("localhost", "root", "", "reg");
   $result = $mysqli->query("SELECT * FROM `comms` WHERE `pageid`=$pageid");
 while ($row = $result->fetch_assoc()) {
@@ -24,7 +24,7 @@ while ($row = $result->fetch_assoc()) {
     <textarea name="text" size="300"></textarea>
   </p>
   <p>
-    <input type="hidden" name="pageid" value="1" />
+    <input type="hidden" name="pageid" value="2" />
     <input type="submit" value="Отправить" />
   </p>
 </body></html>

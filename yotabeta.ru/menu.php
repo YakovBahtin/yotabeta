@@ -2,8 +2,10 @@
 	echo ($_SESSION["username"]), "."; $rsev='<a href="logout.php">Выйти</a> ';
 } else {
 	 	echo 'невошедший.';$rsev='<a href="login.php">Войти</a> ';
-	 };?></p>
-<h2 class=menu><?php
+	 };if (($_SESSION["admin"])==1) {echo " С возвращением, мастер.";};?></p>
+<h2 class=menu>
+
+<?php
 
 $links = array(
 	1 => '<a href="dices.php">Дайсы</a> ',
